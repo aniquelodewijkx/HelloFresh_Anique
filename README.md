@@ -1,4 +1,5 @@
-# Hello Fresh Engineering Intern - Anique
+# Hello Fresh Technical Assignment
+### Engineering Intern - Anique Lodewijkx
 
 Hello! My name is Anique Lodewijkx and this is my submission for the technical assignment for the HelloFresh Engineering Intern position.
 
@@ -7,7 +8,7 @@ The resulting csv file ('recipes_anique_lodewijkx.csv') can be found in the reci
 
 ## Hello_Fresh_Anique.py
 
-My code submission is organised with comments above the lines of code pertaining to them. The main two tasks, filtering for recipes using chilis and assigning a difficulty level to these recipes, are titled with a comment in all capital letters.
+My code submission is organised with comments above the lines of code pertaining to them. The main two tasks, filtering for recipes using chilis and assigning a difficulty level to these recipes, are titled with a comment in all capital letters. Throughout my code I have multiple print statements; this is because I prefer to visualise the data along the way so that I can see whether anything unexpected is happening.
 
 The code works by first reading the recipes.txt file as a json file and loading it into a Pandas dataframe. This allowed me to have a better overview of the data and to use the very useful Pandas methods for cleaning and organising it. For the first task of filtering the dataframe to include only the recipes which have chilis, I first made a column 'has_chili' which is True or False depending on the occurrence of the string 'chilies' or similar misspellings in the ingredients column. Then, a new dataframe 'chili_recipes' is instantiated which only includes the rows for which 'has_chili' is True. Once this process is done, the 'has_chili' column can be removed because its only purpose was to be used for the conditional check. Also, the index column is removed as it represents the index of the row in the previous dataframe, 'recipes', instead of the current one 'chili_recipes'.
 
