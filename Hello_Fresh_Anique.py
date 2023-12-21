@@ -75,7 +75,7 @@ total_time = new_cookTime + new_prepTime
     # 'Hard' for total time greater than 1 hour
     # 'Medium' for total time less than 1 hour but greater 30 minutes
     # 'Easy' for total time 30 minutes or less
-chili_recipes['difficulty'] = total_time.apply(lambda x: 'Hard' if x > pd.Timedelta(hours=1) else 'Medium' if x > pd.Timedelta(minutes=30) else 'Easy')
+chili_recipes['difficulty'] = total_time.apply(lambda x: 'Unknown' if x == pd.Timedelta(0) else 'Hard' if x > pd.Timedelta(hours=1) else 'Medium' if x > pd.Timedelta(minutes=30) else 'Easy')
 
 # %%
 # Display dataframe to ensure correct columns added, 'has_chili' and 'difficulty'
