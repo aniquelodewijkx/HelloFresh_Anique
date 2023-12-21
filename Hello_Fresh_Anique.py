@@ -19,13 +19,13 @@ recipes.ingredients = recipes.ingredients.str.replace('\n','. ')
 recipes.head()
 
 # %%
-# ADD CONTAINS CHILI COLUMN
+# FILTER RECIPES TO ONLY CHILI RECIPES
 
 # Create pandas series with all ingredients in lowercase letters
 ingredients_lowercase = recipes.ingredients.str.lower()
 
 # Find all ingredients with 'chilies' (including spelling errors) in ingredients
-has_chilies = ingredients_lowercase.str.contains('chilies |chillies |chiles |chilles |chili |chilli ')
+has_chilies = ingredients_lowercase.str.contains('chilies|chilis|chillies|chile|chilles|chili|chilli ')
 
 # Make new df column 'has_chili' with True or False
 recipes['has_chili'] = has_chilies
